@@ -1,0 +1,47 @@
+:root {
+    --sidebar-width: 128px;
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    color: #a4acc4;
+}
+
+body {
+    background-color: #2c3653;
+}
+
+.sidebar {
+    padding: 60px 16px;
+    margin: 0px;
+    box-sizing: border-box;
+    height: 100%; /* 100% Full-height */
+    width: var(--sidebar-width);
+    background-color: #3d4a72;
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    /* transition: 0.5s;*/ /* 0.5 second transition effect to slide in the sidebar */
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar > div {
+    background-color: aliceblue;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: inside;
+
+    margin-left: -20px;
+}
+
+.content {
+    margin-left: var(--sidebar-width);
+    background-color: #2c3653;
+}
+
