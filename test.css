@@ -1,0 +1,54 @@
+.bb, .bb::before, .bb::after {
+	 position: absolute;
+	 top: 0;
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+}
+ .bb {
+     width: 50%;
+	 height: 100vh;
+	 margin: auto;
+	 background:  rgba(0, 0, 0, .1);
+	 color: #69ffff;
+	 box-shadow: inset 0 0 0 1px rgba(105, 255, 255, .5);
+}
+ .bb::before, .bb::after {
+	 content: '';
+	 z-index: -1;
+	 margin: 5%;
+	 box-shadow: inset 0 0 0 2px;
+	 animation: clipMe 8s linear infinite;
+}
+ .bb::before {
+	 animation-delay: -4s;
+}
+ .bb:hover::after, .bb:hover::before {
+	 background-color: rgba(255, 0, 0, .3);
+}
+
+@keyframes clipMe {
+	 0%, 100% {
+		 clip: rect(0px, 100vw, 10vh, 0px);
+	}
+	 25% {
+		 clip: rect(0px, 2px, 100vh, 0px);
+	}
+	 50% {
+		 clip: rect(90vh, 90vw, 100vh, 0px);
+	}
+	 75% {
+		 clip: rect(0px, 100vw, 100vh, 90vw);
+	}
+}
+ html, body {
+	 height: 100%;
+}
+ body {
+	 position: relative;
+	 background-color: #0f222b;
+}
+ *, *::before, *::after {
+	 box-sizing: border-box;
+}
+ 
